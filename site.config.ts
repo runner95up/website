@@ -6,7 +6,7 @@ export default siteConfig({
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: '4ff9ccfc-8d6e-488b-b710-938caaf39470', 
+  rootNotionSpaceId: '4ff9ccfc-8d6e-488b-b710-938caaf39470',
   // basic site info (required)
   name: 'Tensai Mono',
   domain: 'tensai-mono.me',
@@ -17,7 +17,7 @@ export default siteConfig({
 
   // social usernames (optional)
   twitter: 'TensaiMono',
-  github: 'tensai-mono', 
+  github: 'tensai-mono',
   youtube: 'channel/UCZ-6HYwjvFiirJwrqpGnNVQ',
   instagram: 'tensaimono',
   // newsletter: '#', // optional newsletter URL
@@ -50,11 +50,7 @@ export default siteConfig({
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
   navigationStyle: 'custom',
-  navigationStyle: 'custom',
-navigationLinks: [
-  { 
-  },
-  { 
-  }
-]
+  navigationLinks: [
+    {title: ''} 
+  ]
 })
