@@ -2,11 +2,11 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: 'cbbe730c62794960b74527039bb835e7',
+  rootNotionPageId: '938d408c2d2045c4b3369aff6ac4fb29',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  //rootNotionSpaceId: '4ff9ccfc-8d6e-488b-b710-938caaf39470',
+  rootNotionSpaceId: '4ff9ccfc-8d6e-488b-b710-938caaf39470',
   // basic site info (required)
   name: 'Tensai Mono',
   domain: 'tensai-mono.me',
