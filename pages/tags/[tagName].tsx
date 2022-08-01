@@ -13,7 +13,7 @@ export const getStaticProps = async (context) => {
 
   try {
     const props = await resolveNotionPage(domain, rootNotionPageId)
-    let propertyToFilterName: string = null
+    let propertyToFilterName: string
 
     if ((props as any).recordMap) {
       const recordMap = (props as any).recordMap as ExtendedRecordMap
