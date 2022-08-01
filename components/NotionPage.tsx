@@ -13,7 +13,7 @@ import TweetEmbed from 'react-tweet-embed'
 import { NotionRenderer } from 'react-notion-x'
 
 // utils
-import { getBlockTitle, normalizeTitle, getPageProperty, formatDate } from 'notion-utils'
+import { getBlockTitle , normalizeTitle, getPageProperty, formatDate } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapImageUrl } from 'lib/map-image-url'
 import { searchNotion } from 'lib/search-notion'
@@ -27,7 +27,7 @@ import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
 import { PageAside } from './PageAside'
 import { Footer } from './Footer'
-import { NotionPageHeader } from './NotionPageHeader'
+import { NotionPageHeader } from './NotionPageHeader' 
 
 import styles from './styles.module.css'
 
@@ -233,7 +233,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const name = getBlockTitle(block, recordMap) || site.name
   const title =
-    propertyToFilterName ? `${propertyToFilterName} ${name}` : name && tagsPage
+    tagsPage && propertyToFilterName ? `${propertyToFilterName} ${name}` : name
 
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
@@ -248,8 +248,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
-    (block as PageBlock).format?.page_cover ||
-    config.defaultPageCover,
+      (block as PageBlock).format?.page_cover ||
+      config.defaultPageCover,
     block
   )
 
@@ -291,13 +291,13 @@ export const NotionPage: React.FC<types.PageProps> = ({
         defaultPageCover={config.defaultPageCover}
         defaultPageCoverPosition={config.defaultPageCoverPosition}
         mapPageUrl={siteMapPageUrl}
-        mapImageUrl={mapImageUrl}
+        mapImageUrl={mapImageUrl}  
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        pageTitle={propertyToFilterName ? title : undefined && tagsPage}
+        pageTitle={tagsPage && propertyToFilterName ? title : undefined}
         footer={footer}
       />
-
+ 
     </>
   )
 }
