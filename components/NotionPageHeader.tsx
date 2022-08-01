@@ -1,5 +1,5 @@
 import * as React from 'react'
-import cs from 'classnames'
+import cs from 'classnames' 
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { Header, Breadcrumbs, Search, useNotionContext } from 'react-notion-x'
@@ -23,10 +23,13 @@ const ToggleThemeButton = () => {
   }, [toggleDarkMode])
 
   return (
+    
     <div
+    
       className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
       onClick={onToggleTheme}
     >
+      
       {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
     </div>
   )
@@ -43,10 +46,13 @@ export const NotionPageHeader: React.FC<{
 
   return (
     <header className='notion-header'>
+      
       <div className='notion-nav-header'>
+        
         <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>
+          
           {navigationLinks
             ?.map((link, index) => {
               if (!link.pageId && !link.url) {

@@ -105,8 +105,8 @@
   color: #ff0000;
 }
 
-.linkedin:hover {
-  color: #0077b5;
+.instagram:hover {
+  color: #C13584;
 }
 
 .newsletter:hover {
@@ -174,16 +174,7 @@
   color: #19bf64;
   background: #e5f2e8;
 }
-
-@media (max-width: 1360px) {
-  .githubCorner {
-    display: none;
-  }
-}
-
-.githubCorner:hover .octoArm {
-  animation: octocat-wave 560ms ease-in-out;
-}
+ 
 
 @keyframes octocat-wave {
   0%,
@@ -199,16 +190,7 @@
     transform: rotate(10deg);
   }
 }
-
-@media (max-width: 500px) {
-  .githubCorner:hover .octoArm {
-    animation: none;
-  }
-
-  .githubCorner .octoArm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
+ 
 
 .hidden {
   visibility: hidden;
