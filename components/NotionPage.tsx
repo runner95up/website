@@ -189,6 +189,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     }),
     []
   )
+  
 
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
@@ -267,6 +268,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         description={socialDescription}
         image={socialImage}
         url={canonicalPageUrl}
+        
       />
 
       {isLiteMode && <BodyClassName className='notion-lite' />}
@@ -274,6 +276,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
       <NotionRenderer
         bodyClassName={cs(
+          
           styles.notion,
           pageId === site.rootNotionPageId && 'index-page',
           tagsPage && 'tags-page'
