@@ -50,6 +50,6 @@ export default siteConfig({
   // important pages
   navigationStyle: 'custom',
   navigationLinks: [
-    {title: ''} 
+    {title: ''}
   ]
 })

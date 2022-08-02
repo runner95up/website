@@ -10,6 +10,7 @@
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
+  
 }
 
 .notion-page {
@@ -55,10 +56,15 @@
 .notion-header .notion-nav-header {
   max-width: 1100px;
   margin: 0 auto;
+  font-size: 19px;
+  font-weight: 600;
+  
+
 }
 
 .notion-nav-header-rhs {
   gap: 0.5rem;
+  
 }
 
 .notion-gallery-grid {
@@ -163,9 +169,11 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 100px) {
   .notion-search-button {
     display: none !important;
+    
+  font-size: 19px;
   }
 }
 
@@ -357,8 +365,7 @@
 
 /* if you don't want rounded page icon images, remove this */
 .notion-page-icon-hero.notion-page-icon-image {
-  border-radius: 50%;
-  box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
+  border-radius: 50%; 
 }
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {
