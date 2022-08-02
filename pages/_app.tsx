@@ -18,51 +18,29 @@ import 'styles/notion.css'
 
 // global style overrides for prism theme (optional)
 import 'styles/prism-theme.css'
+import { useEffect } from 'react';
 
-import * as React from 'react'
-import * as Fathom from 'fathom-client'
+import * as React from 'react' 
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import posthog from 'posthog-js' 
-import {
-  isServer,
-  fathomId,
-  fathomConfig,
-  posthogId,
-  posthogConfig
-} from 'lib/config'
+import { useRouter } from 'next/router' 
+import { isServer } from 'lib/config'
 
-if (!isServer) { 
+if (!isServer) {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter()
-
-  React.useEffect(() => {
-    function onRouteChangeComplete() {
-      if (fathomId) {
-        Fathom.trackPageview()
-      }
-
-      if (posthogId) {
-        posthog.capture('$pageview')
-      }
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = url => {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        page_path: url,
+      });
     }
-
-    if (fathomId) {
-      Fathom.load(fathomId, fathomConfig)
-    }
-
-    if (posthogId) {
-      posthog.init(posthogId, posthogConfig)
-    }
-
-    router.events.on('routeChangeComplete', onRouteChangeComplete)
-
+    router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete)
+      router.events.off('routeChangeComplete', handleRouteChange);
     }
-  }, [router.events])
-
+  }, [router.events]);
   return <Component {...pageProps} />
+
 }
