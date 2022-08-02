@@ -24,9 +24,9 @@ import * as React from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router' 
 import { isServer } from 'lib/config'
-
+import { bootstrap } from 'lib/bootstrap-client'
 if (!isServer) {
-
+  bootstrap()
 }
 
 export default function App({ Component, pageProps }: AppProps) {
