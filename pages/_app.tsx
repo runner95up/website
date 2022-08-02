@@ -26,6 +26,7 @@ import { useRouter } from 'next/router'
 import { isServer } from 'lib/config'
 
 if (!isServer) {
+
 }
 
 export default function App({ Component, pageProps }: AppProps) {

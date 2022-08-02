@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-            
+           
             <script async src={gtag} />
             <script
               dangerouslySetInnerHTML={{
@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
               sizes='32x32'
               href='favicon.png'
             />
-
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429" crossorigin="anonymous" />
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
