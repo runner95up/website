@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429" crossorigin="anonymous" />
+            
             <script async src={gtag} />
             <script
               dangerouslySetInnerHTML={{
