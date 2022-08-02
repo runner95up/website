@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-           
+
             <script async src={gtag} />
             <script
               dangerouslySetInnerHTML={{
@@ -21,8 +21,7 @@ export default class MyDocument extends Document {
                   page_path: window.location.pathname,
                 });
               `
-              }}
-            />
+              }} />
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'
@@ -30,7 +29,7 @@ export default class MyDocument extends Document {
               sizes='32x32'
               href='favicon.png'
             />
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429" crossorigin="anonymous" />
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429" crossOrigin="anonymous" />
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
@@ -78,7 +77,7 @@ export default class MyDocument extends Document {
             <Main />
 
             <NextScript />
-            
+
           </body>
         </Html>
       </IconContext.Provider>
