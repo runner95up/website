@@ -11,15 +11,7 @@ export default class MyDocument extends Document {
           <Head>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429"
               crossOrigin="anonymous" />
-              <script dangerouslySetInnerHTML={{
-                __html:`window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}',{
-                  page_path: window.location.pathname,
-                });
-              `,
-                }}/>
+            
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'
