@@ -232,6 +232,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   }
 
   const name = getBlockTitle(block, recordMap) || site.name
+  
   const title =
     tagsPage && propertyToFilterName ? `${propertyToFilterName} ${name}` : name
 
