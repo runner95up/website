@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { IconContext } from '@react-icons/all-files'
-const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+import { GA_TRACKING_ID } from 'lib/gtag'
 
 export default class MyDocument extends Document {
   render() {
@@ -9,19 +9,17 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-
-            <script async src={gtag} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                window.dataLayer = window.dataLayer || [];
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429"
+              crossOrigin="anonymous" />
+              <script dangerouslySetInnerHTML={{
+                __html:`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                gtag('config', '${GA_TRACKING_ID}',{
                   page_path: window.location.pathname,
                 });
-              `
-              }} />
+              `,
+                }}/>
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'
@@ -29,7 +27,6 @@ export default class MyDocument extends Document {
               sizes='32x32'
               href='favicon.png'
             />
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429" crossOrigin="anonymous" />
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
