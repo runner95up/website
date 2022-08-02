@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { IconContext } from '@react-icons/all-files' 
+import { IconContext } from '@react-icons/all-files'
 
 export default class MyDocument extends Document {
   render() {
@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
           <Head>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3722282381786429"
               crossOrigin="anonymous" />
-            
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'
