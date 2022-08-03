@@ -264,7 +264,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         recordMap.block[key].value.properties.language[0][0] = 'Cpp'
       }
     })
-  } catch (error) {}
+  } catch (error) { console.log(``) }
 
   return (
     <>
