@@ -48,9 +48,6 @@ export const NotionPageHeader: React.FC<{
         <div className='notion-nav-header'>
           <Breadcrumbs block={block} rootOnly={true} />
           <div className='notion-nav-header-rhs breadcrumbs'>
-
- 
-             
             <ToggleThemeButton />
             {isSearchEnabled && <Search block={block} title={null} />}
           </div>
